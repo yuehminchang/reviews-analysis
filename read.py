@@ -6,9 +6,10 @@ with open('reviews.txt','r') as f:
         count +=1
         if count % 1000 == 0:
             print(len(data))
-print(len(data))
+print('file read total',len(data),'lines')
 
-print(data[0])
-print('-'*18)
-print(data[1])
+sum_len = 0
+for d in data:
+    sum_len = sum_len + len(d)
 
+print(sum_len/len(data))
